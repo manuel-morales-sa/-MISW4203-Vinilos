@@ -1,4 +1,4 @@
-package com.example.misw4203_vinilos
+package com.vinylsMobile.vinylsapplication
 
 import org.junit.Test
 

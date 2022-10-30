@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">MISW4203-Vinilos</string>
+    <string name="app_name">Vinilos</string>
+    <string name="record_label">Casa disquera:</string>
+    <string name="title_activity_detail_album"></string>
+    <string name="genre_label">Género:</string>
+    <string name="date_label">Fecha de lanzamiento:</string>
+    <string name="description_label">Descripción:</string>
 </resources>

@@ -1,7 +1,8 @@
-package com.example.misw4203_vinilos
+package com.example.vinilos.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.vinylsMobile.vinylsapplication.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

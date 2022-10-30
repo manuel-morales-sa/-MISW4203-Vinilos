@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="Navbar_color">#1B2F44</color>
+    <color name="Navbar_font">#193443</color>
+    <color name="Navbar_outline">#233E58</color>
+    <color name="gray_fount">#B7BABA</color>
+    <color name="white_text">#FFFFFF</color>
+    <color name="black_text">#090E0E</color>
+    <color name="orange_night">#FF9503</color>
+    <color name="black">#FAF8F8</color>
+    <color name="white">#FAFAFA</color>
+    <color name="turquoise">#16C8C9</color>
 </resources>
