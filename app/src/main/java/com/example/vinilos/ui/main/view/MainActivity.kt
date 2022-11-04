@@ -3,20 +3,7 @@ package com.example.vinilos.ui.main.view
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.vinilos.ui.main.adapter.MainAdapter
-import com.example.vinilos.ui.main.viewmodel.MainViewModel
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
-import android.view.View
-import android.widget.Toast
-import com.example.vinilos.data.api.ApiHelper
-import com.example.vinilos.data.api.RetrofitBuilder
-import com.example.vinilos.data.model.albumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityMainBinding
-import com.example.vinilos.ui.base.ViewModelFactory
-import com.vinylsMobile.vinylsapplication.utils.Status
 
 
 class MainActivity : AppCompatActivity() {

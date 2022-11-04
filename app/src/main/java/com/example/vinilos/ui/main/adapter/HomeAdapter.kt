@@ -6,15 +6,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-
 import com.example.vinilos.data.model.albumResponse
-import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 import com.example.vinilos.ui.main.view.DetailAlbumActivity
+import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
 const val ID = "id"
-
-class MainAdapter (private val albums: ArrayList<albumResponse>
-) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+class HomeAdapter (private val albums: ArrayList<albumResponse>
+) : RecyclerView.Adapter<HomeAdapter.DataViewHolder>() {
 
     lateinit var context : Context
 
@@ -43,7 +41,6 @@ class MainAdapter (private val albums: ArrayList<albumResponse>
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bindPar.root.setOnClickListener {
-            //Log.d("hola"," mundo")
             val intent = Intent(context, DetailAlbumActivity::class.java).apply {
                 putExtra(ID, albums[position].id.toString())
             }

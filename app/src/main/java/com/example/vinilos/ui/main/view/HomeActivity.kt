@@ -12,22 +12,20 @@ import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
 import com.example.vinilos.data.model.albumResponse
 import com.example.vinilos.ui.base.ViewModelFactory
-import com.example.vinilos.ui.main.adapter.MainAdapter
-import com.example.vinilos.ui.main.viewmodel.MainViewModel
-import com.vinylsMobile.vinylsapplication.R
-import com.vinylsMobile.vinylsapplication.databinding.ActivityMainBinding
+import com.example.vinilos.ui.main.adapter.HomeAdapter
+import com.example.vinilos.ui.main.viewmodel.HomeViewModel
+import com.vinylsMobile.vinylsapplication.databinding.ActivityHomeBinding
 import com.vinylsMobile.vinylsapplication.utils.Status
 
 class HomeActivity : AppCompatActivity() {
-    private lateinit var mainViewModel: MainViewModel
-    private lateinit var adapter: MainAdapter
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var adapter: HomeAdapter
+    private lateinit var binding: ActivityHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        //binding = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
         setupUI()
@@ -37,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun setupUI() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = MainAdapter(arrayListOf())
+        adapter = HomeAdapter(arrayListOf())
         binding.recyclerView.addItemDecoration(
             DividerItemDecoration(
                 binding.recyclerView.context,
@@ -48,22 +46,22 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupObservers() {
-        mainViewModel.getAlbums().observe(this, Observer {
+        homeViewModel.getAlbums().observe(this, Observer {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
-                        //binding.recyclerView.visibility = View.VISIBLE
-                        //binding.progressBar.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        binding.progressBar.visibility = View.GONE
                         resource.data?.let { albums -> retrieveList(albums) }
                     }
                     Status.ERROR-> {
-                        //binding.recyclerView.visibility = View.VISIBLE
-                        //binding.progressBar.visibility = View.GONE
+                        binding.recyclerView.visibility = View.VISIBLE
+                        binding.progressBar.visibility = View.GONE
                         Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                     }
                     Status.LOADING -> {
-                        //binding.progressBar.visibility = View.VISIBLE
-                        //binding.recyclerView.visibility = View.GONE
+                        binding.progressBar.visibility = View.VISIBLE
+                        binding.recyclerView.visibility = View.GONE
                     }
                 }
             }
@@ -72,10 +70,10 @@ class HomeActivity : AppCompatActivity() {
 
 
     private fun setupViewModel() {
-        mainViewModel = ViewModelProviders.of(
+        homeViewModel = ViewModelProviders.of(
             this,
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(MainViewModel::class.java)
+        ).get(HomeViewModel::class.java)
     }
 
     private fun retrieveList(albums: List<albumResponse>) {
