@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="Navbar_color">#1B2F44</color>
+    <color name="Navbar_color">#131519</color>
     <color name="Navbar_font">#193443</color>
     <color name="Navbar_outline">#233E58</color>
-    <color name="gray_fount">#B7BABA</color>
+    <color name="gray_fount">#131519</color>
     <color name="white_text">#FFFFFF</color>
     <color name="black_text">#090E0E</color>
     <color name="orange_night">#FF9503</color>
