@@ -14,11 +14,11 @@ import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailAlbumBinding
 import com.example.vinilos.ui.base.ViewModelFactory
 import com.example.vinilos.ui.main.adapter.DetailAdapter
 import com.example.vinilos.ui.main.adapter.ID
-import com.example.vinilos.ui.main.viewmodel.MainViewModel
+import com.example.vinilos.ui.main.viewmodel.HomeViewModel
 import com.vinylsMobile.vinylsapplication.utils.Status
 
 class DetailAlbumActivity : AppCompatActivity() {
-    private lateinit var mainViewModel: MainViewModel
+    private lateinit var homeViewModel: HomeViewModel
     private lateinit var adapter: DetailAdapter
 
     private lateinit var binding: ActivityDetailAlbumBinding
@@ -39,14 +39,14 @@ class DetailAlbumActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        mainViewModel = ViewModelProviders.of(
+        homeViewModel = ViewModelProviders.of(
             this,
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(MainViewModel::class.java)
+        ).get(HomeViewModel::class.java)
     }
 
     private fun setupObservers(id:String) {
-        mainViewModel.getAlbumDetail(id).observe(this, Observer {
+        homeViewModel.getAlbumDetail(id).observe(this, Observer {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {

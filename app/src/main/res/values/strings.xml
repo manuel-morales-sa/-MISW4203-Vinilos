@@ -5,4 +5,7 @@
     <string name="genre_label">Género:</string>
     <string name="date_label">Fecha de lanzamiento:</string>
     <string name="description_label">Descripción:</string>
+    <string name="collector">Coleccionista</string>
+    <string name="visitor">Visitante</string>
+    <string name="logo">Logo</string>
 </resources>
