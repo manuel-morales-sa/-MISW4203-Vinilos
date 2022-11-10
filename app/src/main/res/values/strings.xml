@@ -8,4 +8,7 @@
     <string name="collector">Coleccionista</string>
     <string name="visitor">Visitante</string>
     <string name="logo">Logo</string>
+    <string name="album_label_navbar">Albums</string>
+    <string name="artist_label_navbar">Artistas</string>
+    <string name="collector_label_navbar">Coleccionistas</string>
 </resources>
