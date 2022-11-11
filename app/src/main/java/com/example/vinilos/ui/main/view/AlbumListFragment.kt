@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
-import com.example.vinilos.data.model.albumResponse
+import com.example.vinilos.data.model.AlbumResponse
 import com.example.vinilos.ui.base.ViewModelFactory
 import com.example.vinilos.ui.main.adapter.HomeAdapter
 import com.example.vinilos.ui.main.viewmodel.HomeViewModel
@@ -96,7 +96,7 @@ class AlbumListFragment : Fragment() {
         }
     }
 
-    private fun retrieveList(albums: List<albumResponse>) {
+    private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)
             notifyDataSetChanged()

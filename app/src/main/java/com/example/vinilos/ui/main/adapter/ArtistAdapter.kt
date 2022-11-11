@@ -6,26 +6,31 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.vinilos.data.model.AlbumResponse
-import com.example.vinilos.ui.main.view.DetailAlbumActivity
+import com.example.vinilos.ui.main.view.DetailArtistActivity
+import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
-const val ID = "id"
-class HomeAdapter (
-    private val albums: ArrayList<AlbumResponse>
-) : RecyclerView.Adapter<HomeAdapter.DataViewHolder>() {
+const val IdArtist = "id"
+const val artist = "band"
+const val bandText = "Band"
+const val musicText = "Musician"
+
+class ArtistAdapter(
+    private val artists: ArrayList<ArtistResponse>
+) : RecyclerView.Adapter<ArtistAdapter.DataViewHolder>() {
 
     lateinit var context: Context
 
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding
-        fun bind(album: AlbumResponse) {
+        fun bind(artist: ArtistResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumName.text = album.name
-                bindPar.textAlbumRecord.text = album.recordLabel
+                bindPar.textViewAlbumName.text = artist.name
+                bindPar.textAlbumRecord.text =
+                    if (artist.birthDate == null) bandText else musicText
                 Glide.with(bindPar.imageViewAvatar.context)
-                    .load(album.cover)
+                    .load(artist.image)
                     .into(bindPar.imageViewAvatar)
             }
         }
@@ -38,26 +43,26 @@ class HomeAdapter (
         return DataViewHolder(binding)
     }
 
-    override fun getItemCount(): Int = albums.size
+    override fun getItemCount(): Int = artists.size
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bindPar.root.setOnClickListener {
-            //Log.d("hola"," mundo")
-            val intent = Intent(context, DetailAlbumActivity::class.java).apply {
-                putExtra(ID, albums[position].id.toString())
+            val intent = Intent(context, DetailArtistActivity::class.java).apply {
+                putExtra(IdArtist, artists[position].id.toString())
+                putExtra(artist, if (artists[position].birthDate == null) bandText else musicText)
             }
 
             context.startActivity(intent)
 
         }
 
-        holder.bind(albums[position])
+        holder.bind(artists[position])
     }
 
-    fun addAlbums(albums: List<AlbumResponse>) {
-        this.albums.apply {
+    fun addArtists(artists: List<ArtistResponse>) {
+        this.artists.apply {
             clear()
-            addAll(albums)
+            addAll(artists)
         }
 
     }

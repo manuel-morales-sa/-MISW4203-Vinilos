@@ -1,15 +1,13 @@
 package com.example.vinilos.ui.main.view
 
-import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
-import com.example.vinilos.data.model.albumResponse
+import com.example.vinilos.data.model.AlbumResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailAlbumBinding
 import com.example.vinilos.ui.base.ViewModelFactory
 import com.example.vinilos.ui.main.adapter.DetailAdapter
@@ -18,7 +16,7 @@ import com.example.vinilos.ui.main.viewmodel.HomeViewModel
 import com.vinylsMobile.vinylsapplication.utils.Status
 
 class DetailAlbumActivity : AppCompatActivity() {
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var mainViewModel: HomeViewModel
     private lateinit var adapter: DetailAdapter
 
     private lateinit var binding: ActivityDetailAlbumBinding
@@ -31,7 +29,7 @@ class DetailAlbumActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true);
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val id = intent.getStringExtra(ID)!!
 
         setupViewModel()
@@ -39,14 +37,14 @@ class DetailAlbumActivity : AppCompatActivity() {
     }
 
     private fun setupViewModel() {
-        homeViewModel = ViewModelProviders.of(
+        mainViewModel = ViewModelProviders.of(
             this,
             ViewModelFactory(ApiHelper(RetrofitBuilder.apiService))
-        ).get(HomeViewModel::class.java)
+        )[HomeViewModel::class.java]
     }
 
-    private fun setupObservers(id:String) {
-        homeViewModel.getAlbumDetail(id).observe(this, Observer {
+    private fun setupObservers(id: String) {
+        mainViewModel.getAlbumDetail(id).observe(this, {
             it?.let { resource ->
                 when (resource.status) {
                     Status.SUCCESS -> {
@@ -62,21 +60,20 @@ class DetailAlbumActivity : AppCompatActivity() {
         })
     }
 
-    private fun retrieveAlbumDetail(album: albumResponse) {
+    private fun retrieveAlbumDetail(album: AlbumResponse) {
         adapter = DetailAdapter(album)
         adapter.adaptData(binding)
-        supportActionBar?.title =album.name
+        supportActionBar?.title = album.name
+        supportActionBar?.subtitle = "Album"
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.home -> {
+            android.R.id.home -> {
                 finish()
                 return true
             }
         }
         return super.onContextItemSelected(item)
     }
-
-
 }
