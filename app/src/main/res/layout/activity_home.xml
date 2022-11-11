@@ -28,10 +28,9 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:itemBackground="@color/Navbar_outline"
-        app:itemHorizontalTranslationEnabled="false"
         app:itemIconTint="@android:color/tab_indicator_text"
         app:itemTextColor="@android:color/tab_indicator_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/navigation_menu_icons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,4 +11,5 @@
     <color name="white">#FAFAFA</color>
     <color name="turquoise">#16C8C9</color>
     <color name="primary">#6200EE</color>
+    <color name="BaseColor">#18FFFF</color>
 </resources>
