@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VinylsApplication</string>
+    <string name="app_name">Vinilos</string>
     <string name="artist_label">Artista:</string>
     <string name="date_label">Fecha de lanzamiento:</string>
     <string name="genre_label">Género:</string>

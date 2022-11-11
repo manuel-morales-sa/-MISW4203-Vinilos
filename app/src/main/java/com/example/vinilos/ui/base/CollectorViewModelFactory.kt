@@ -2,9 +2,9 @@ package com.vinylsMobile.vinylsApplication.ui.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.vinylsMobile.vinylsApplication.data.api.ApiHelper
+import com.example.vinilos.data.api.ApiHelper
+import com.example.vinilos.ui.main.viewmodel.CollectorViewModel
 import com.vinylsMobile.vinylsApplication.data.repository.CollectorRepository
-import com.vinylsMobile.vinylsApplication.ui.main.viewmodel.CollectorViewModel
 
 class CollectorViewModelFactory(private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 
