@@ -29,8 +29,8 @@
         android:background="#FFFFFF"
         app:itemBackground="@color/Navbar_outline"
         app:itemHorizontalTranslationEnabled="false"
-        app:itemIconTint="@color/turquoise"
-        app:itemTextColor="@color/turquoise"
+        app:itemIconTint="@android:color/tab_indicator_text"
+        app:itemTextColor="@android:color/tab_indicator_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation_menu" />
 
