@@ -37,100 +37,136 @@
 
             <ImageView
                 android:id="@+id/imageViewAlbumDetails"
-                android:layout_width="409dp"
-                android:layout_height="170dp"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="32dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.128"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintVertical_bias="0.104"
+                tools:srcCompat="@tools:sample/avatars"
+                android:contentDescription="@string/detail_album_description_image" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/textLabelArtist"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/artist_label"
+                android:textColor="@color/turquoise"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewAlbumDetails" />
+
+            <TextView
+                android:id="@+id/textContentArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:textColor="@color/black"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabelArtist"
+                app:layout_constraintStart_toEndOf="@+id/textLabelArtist"
+                tools:text="Name Artists" />
+
+
+            <TextView
+                android:id="@+id/textLabelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/date_label"
                 android:textColor="@color/turquoise"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="@id/imageViewAlbumDetails"
-                app:layout_constraintVertical_bias="0.32"
-                tools:layout_editor_absoluteX="16dp"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelArtist" />
 
             <TextView
-                android:id="@+id/textViewArtist"
-                android:layout_width="wrap_content"
+                android:id="@+id/textContentDate"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
                 android:textColor="@color/black"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
-                app:layout_constraintStart_toEndOf="@+id/textView2" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabelDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textLabelDate"
+                tools:text="2021-11-07" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/textLabelGenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="37dp"
-                android:layout_marginBottom="360dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/genre_label"
                 android:textColor="@color/turquoise"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/textView2"
-                app:layout_constraintVertical_bias="0.093"
-                tools:layout_editor_absoluteX="16dp"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelDate" />
 
             <TextView
-                android:id="@+id/textViewGenre"
+                android:id="@+id/textContentGenre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:textColor="@color/black"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
-                app:layout_constraintStart_toEndOf="@+id/textView3" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabelGenre"
+                app:layout_constraintStart_toEndOf="@+id/textLabelGenre"
+                tools:text="Pop Rock Latino " />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textLabelRecord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/record_label"
                 android:textColor="@color/turquoise"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                app:layout_constraintVertical_bias="0.054"
-                tools:layout_editor_absoluteX="16dp"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textContentGenre" />
 
             <TextView
-                android:id="@+id/textViewRecord"
+                android:id="@+id/textContentRecord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:textColor="@color/black"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
-                app:layout_constraintStart_toEndOf="@+id/textView4" />
+                app:layout_constraintBaseline_toBaselineOf="@+id/textLabelRecord"
+                app:layout_constraintStart_toEndOf="@+id/textLabelRecord"
+                tools:text="Uniandes Disc" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/textLabelDescription"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
                 android:text="@string/description_label"
                 android:textColor="@color/turquoise"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                app:layout_constraintVertical_bias="0.075"
-                tools:layout_editor_absoluteX="16dp"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelRecord" />
 
             <TextView
-                android:id="@+id/textViewDescrption"
-                android:layout_width="wrap_content"
+                android:id="@+id/textContentDescription"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/roboto"
                 android:textColor="@color/black"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-                app:layout_constraintStart_toEndOf="@+id/textView5" />
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textLabelDescription"
+                app:layout_constraintTop_toBottomOf="@+id/textLabelDescription"
+                tools:text="Descripcion de un texto muy largo de ejemplo para poder maquetar este textview " />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

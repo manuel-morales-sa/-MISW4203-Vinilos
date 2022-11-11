@@ -3,6 +3,7 @@
     <string name="record_label">Casa disquera:</string>
     <string name="title_activity_detail_album"></string>
     <string name="genre_label">Género:</string>
+    <string name="artist_label">Artista:</string>
     <string name="date_label">Fecha de lanzamiento:</string>
     <string name="description_label">Descripción:</string>
     <string name="collector">Coleccionista</string>
@@ -11,4 +12,5 @@
     <string name="album_label_navbar">Albums</string>
     <string name="artist_label_navbar">Artistas</string>
     <string name="collector_label_navbar">Coleccionistas</string>
+    <string name="detail_album_description_image">Imagen del detalle del album</string>
 </resources>
