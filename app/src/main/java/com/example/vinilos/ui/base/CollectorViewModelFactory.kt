@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.ui.main.viewmodel.CollectorViewModel
-import com.vinylsMobile.vinylsApplication.data.repository.CollectorRepository
+import com.example.vinilos.data.repository.CollectorRepository
 
 class CollectorViewModelFactory(private val apiHelper: ApiHelper) : ViewModelProvider.Factory {
 

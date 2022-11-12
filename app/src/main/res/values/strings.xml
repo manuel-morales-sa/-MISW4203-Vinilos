@@ -16,8 +16,8 @@
     <string name="menu_artist_label">Artists</string>
     <string name="title_activity_detail_album">Prueba</string>
     <string name="logo">Logo</string>
-    <string name="collector">Collectors</string>
-    <string name="visitor">Visitor</string>
+    <string name="collector">Coleccionistas</string>
+    <string name="visitor">Visitantes</string>
     <string name="menu_collector_label">Collectors</string>
 
 </resources>

@@ -12,5 +12,5 @@
     <item
         android:title="@string/menu_collector_label"
         android:id="@+id/action_books"
-        android:icon="@drawable/ic_navbar_collector_icon" />
+        android:icon="@drawable/ic_navbar_collectors_icon_2" />
 </menu>

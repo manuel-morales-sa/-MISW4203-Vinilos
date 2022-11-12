@@ -1,4 +1,4 @@
-package com.vinylsMobile.vinylsApplication.data.repository
+package com.example.vinilos.data.repository
 
 import com.example.vinilos.data.api.ApiHelper
 

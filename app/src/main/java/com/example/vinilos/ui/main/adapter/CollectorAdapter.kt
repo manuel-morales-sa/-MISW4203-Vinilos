@@ -22,15 +22,15 @@ class CollectorAdapter(
         private val bindPar = binding
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumName.text = collector.name
-                bindPar.textAlbumRecord.text = collector.email
+                bindPar.textViewAlbumName.text = "xxxxxxxxxxxxx"
+                bindPar.textAlbumRecord.text = "xxxxxxxxx@xxxxx.xxx"
                 Glide.with(bindPar.imageViewAvatar.context)
-                    .load(R.drawable.ic_collector)
-                    .error(R.drawable.ic_collector).placeholder(R.drawable.ic_collector)
+                    .load(R.drawable.ic_baseline_construction_collector)
+                    .error(R.drawable.ic_baseline_construction_collector).placeholder(R.drawable.ic_baseline_construction_collector)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(bindPar.imageViewAvatar)
                 bindPar.imageViewAvatar.setColorFilter(
-                    Color.rgb(162, 0, 0),
+                    Color.rgb(93, 193, 185),
                     PorterDuff.Mode.SRC_ATOP
                 )
             }
