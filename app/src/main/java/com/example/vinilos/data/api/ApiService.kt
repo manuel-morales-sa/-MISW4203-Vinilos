@@ -29,4 +29,7 @@ interface ApiService {
 
         @GET("bands/{id}")
         suspend fun getBandsDetail(@Path("id") id: String): ArtistResponse
+
+        @GET("collectors/{id}")
+        suspend fun getCollectorsDetail(@Path("id") id: String): CollectorResponse
 }

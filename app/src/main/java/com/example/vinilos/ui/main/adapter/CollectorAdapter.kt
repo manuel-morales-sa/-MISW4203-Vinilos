@@ -1,6 +1,7 @@
 package com.example.vinilos.ui.main.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.vinilos.data.model.CollectorResponse
+import com.example.vinilos.ui.main.view.DetailCollectorActivity
 import com.vinylsMobile.vinylsapplication.R
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
@@ -19,7 +21,7 @@ class CollectorAdapter(
     lateinit var context: Context
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-        private val bindPar = binding
+        val bindPar = binding
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
                 bindPar.textViewAlbumName.text = collector.name
@@ -47,6 +49,14 @@ class CollectorAdapter(
     override fun getItemCount(): Int = collectors.size
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
+        holder.bindPar.root.setOnClickListener {
+            val intent = Intent(context, DetailCollectorActivity::class.java).apply {
+                putExtra(IdCollector, collectors[position].id.toString())
+            }
+
+            context.startActivity(intent)
+
+        }
 
         holder.bind(collectors[position])
     }

@@ -33,9 +33,7 @@ class HomeActivity : AppCompatActivity() {
                     setFragment(AlbumListFragment.newInstance())
                     return@setOnItemSelectedListener true
                 }
-
                 binding.bottomNavigationView.menu.getItem(1).itemId -> {
-
                     setFragment(ArtistListFragment.newInstance())
                     return@setOnItemSelectedListener true
                 }
@@ -43,7 +41,6 @@ class HomeActivity : AppCompatActivity() {
                     setFragment(CollectorListFragment.newInstance())
                     return@setOnItemSelectedListener true
                 }
-
             }
             false
         }

@@ -19,5 +19,7 @@
     <string name="collector">Coleccionistas</string>
     <string name="visitor">Visitantes</string>
     <string name="menu_collector_label">Collectors</string>
-
+    <string name="collector_label">Coleccionista:</string>
+    <string name="favorite_performers">Interpretes favoritos:</string>
+    <string name="comments">Comentarios:</string>
 </resources>

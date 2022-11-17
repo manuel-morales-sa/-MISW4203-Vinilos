@@ -7,7 +7,7 @@ class CommentModel {
     lateinit var id: Number
 
     @SerializedName("description")
-    var name: String? = null
+    var description: String? = null
 
     @SerializedName("rating")
     lateinit var rating: Number

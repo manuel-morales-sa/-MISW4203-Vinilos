@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
         <activity
+            android:name="com.example.vinilos.ui.main.view.DetailCollectorActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.vinilos.ui.main.view.HomeActivity"
+            android:theme="@style/Theme.Vinilos.NoActionBar" />
+        <activity
             android:name="com.example.vinilos.ui.main.view.HomeActivity"
             android:exported="false">
             <meta-data
