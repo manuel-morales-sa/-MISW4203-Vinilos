@@ -3,7 +3,7 @@ package com.example.vinilos.ui.main.adapter
 
 import android.annotation.SuppressLint
 import com.bumptech.glide.Glide
-import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
+import com.example.vinilos.data.model.ArtistResponse
 import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailArtistBinding
 import java.text.DateFormat
 import java.util.*

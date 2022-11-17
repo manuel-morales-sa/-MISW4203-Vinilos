@@ -3,7 +3,7 @@ package com.example.vinilos.ui.main.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.vinilos.data.repository.AlbumRepository
-import com.vinylsMobile.vinylsapplication.utils.Resource
+import com.example.vinilos.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
 class HomeViewModel (private val AlbumRepository: AlbumRepository) : ViewModel() {

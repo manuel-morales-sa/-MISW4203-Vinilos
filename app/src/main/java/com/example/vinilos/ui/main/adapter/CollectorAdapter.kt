@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
+import com.example.vinilos.data.model.CollectorResponse
 import com.vinylsMobile.vinylsapplication.R
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
@@ -22,8 +22,8 @@ class CollectorAdapter(
         private val bindPar = binding
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumName.text = "xxxxxxxxxxxxx"
-                bindPar.textAlbumRecord.text = "xxxxxxxxx@xxxxx.xxx"
+                bindPar.textViewAlbumName.text = collector.name
+                bindPar.textAlbumRecord.text = collector.email
                 Glide.with(bindPar.imageViewAvatar.context)
                     .load(R.drawable.ic_baseline_construction_collector)
                     .error(R.drawable.ic_baseline_construction_collector).placeholder(R.drawable.ic_baseline_construction_collector)

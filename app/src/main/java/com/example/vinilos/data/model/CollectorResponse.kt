@@ -1,6 +1,5 @@
-package com.vinylsMobile.vinylsApplication.data.model
+package com.example.vinilos.data.model
 
-import com.example.vinilos.data.model.AlbumResponse
 import com.google.gson.annotations.SerializedName
 
 class CollectorResponse {

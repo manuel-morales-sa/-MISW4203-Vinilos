@@ -2,8 +2,8 @@ package com.example.vinilos.data.api
 
 
 import com.example.vinilos.data.model.AlbumResponse
-import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
-import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
+import com.example.vinilos.data.model.ArtistResponse
+import com.example.vinilos.data.model.CollectorResponse
 
 import retrofit2.http.GET
 import retrofit2.http.Path

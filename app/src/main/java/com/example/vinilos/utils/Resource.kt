@@ -1,4 +1,4 @@
-package com.vinylsMobile.vinylsapplication.utils
+package com.example.vinilos.utils
 
 data class Resource<out T>(val status: Status, val data: T?, val message: String?) {
 

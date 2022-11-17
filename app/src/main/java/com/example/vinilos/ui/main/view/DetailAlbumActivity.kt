@@ -13,7 +13,7 @@ import com.example.vinilos.ui.base.ViewModelFactory
 import com.example.vinilos.ui.main.adapter.DetailAdapter
 import com.example.vinilos.ui.main.adapter.ID
 import com.example.vinilos.ui.main.viewmodel.HomeViewModel
-import com.vinylsMobile.vinylsapplication.utils.Status
+import com.example.vinilos.utils.Status
 
 class DetailAlbumActivity : AppCompatActivity() {
     private lateinit var mainViewModel: HomeViewModel

@@ -4,7 +4,7 @@ package com.example.vinilos.ui.main.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import com.example.vinilos.data.repository.CollectorRepository
-import com.vinylsMobile.vinylsapplication.utils.Resource
+import com.example.vinilos.utils.Resource
 import kotlinx.coroutines.Dispatchers
 
 class CollectorViewModel(private val CollectorRepository: CollectorRepository) : ViewModel() {

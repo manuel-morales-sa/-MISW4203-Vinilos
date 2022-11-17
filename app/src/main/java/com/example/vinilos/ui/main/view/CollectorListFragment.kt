@@ -14,10 +14,10 @@ import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
 import com.example.vinilos.ui.main.adapter.CollectorAdapter
 import com.example.vinilos.ui.main.viewmodel.CollectorViewModel
-import com.vinylsMobile.vinylsApplication.data.model.CollectorResponse
-import com.vinylsMobile.vinylsApplication.ui.base.CollectorViewModelFactory
+import com.example.vinilos.data.model.CollectorResponse
+import com.example.vinilos.ui.base.CollectorViewModelFactory
 import com.vinylsMobile.vinylsapplication.databinding.FragmentCollectorListBinding
-import com.vinylsMobile.vinylsapplication.utils.Status
+import com.example.vinilos.utils.Status
 
 /**
  * A simple [Fragment] subclass.

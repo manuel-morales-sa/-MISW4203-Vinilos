@@ -16,7 +16,7 @@ import com.example.vinilos.ui.base.ViewModelFactory
 import com.example.vinilos.ui.main.adapter.HomeAdapter
 import com.example.vinilos.ui.main.viewmodel.HomeViewModel
 import com.vinylsMobile.vinylsapplication.databinding.FragmentAlbumListBinding
-import com.vinylsMobile.vinylsapplication.utils.Status
+import com.example.vinilos.utils.Status
 
 /**
  * A simple [Fragment] subclass.

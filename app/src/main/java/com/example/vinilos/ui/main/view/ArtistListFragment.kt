@@ -13,10 +13,10 @@ import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
 import com.example.vinilos.ui.main.adapter.ArtistAdapter
 import com.example.vinilos.ui.main.viewmodel.ArtistViewModel
-import com.vinylsMobile.vinylsApplication.data.model.ArtistResponse
-import com.vinylsMobile.vinylsApplication.ui.base.ArtistViewModelFactory
+import com.example.vinilos.data.model.ArtistResponse
+import com.example.vinilos.ui.base.ArtistViewModelFactory
 import com.vinylsMobile.vinylsapplication.databinding.FragmentArtistListBinding
-import com.vinylsMobile.vinylsapplication.utils.Status
+import com.example.vinilos.utils.Status
 
 /**
  * A simple [Fragment] subclass.
