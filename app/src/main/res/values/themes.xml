@@ -1,8 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Theme.Vinilos" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/Navbar_font</item>
-        <item name="colorPrimaryVariant">@color/Navbar_outline</item>
+        <item name="colorPrimary">@color/ToolsBar</item>
+        <item name="colorPrimaryVariant">@color/ButtonColor</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorSecondary">@color/white_text</item>
         <item name="colorSecondaryVariant">@color/black_text</item>
