@@ -8,5 +8,5 @@ data class Performer (
     val image : String,
     val description : String,
     val birthDate : String,
-    val albums : List<Album>
+    val albums : List<AlbumResponse>
 ) : Serializable

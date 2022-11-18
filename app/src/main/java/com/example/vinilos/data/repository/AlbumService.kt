@@ -1,7 +1,8 @@
 package com.example.vinilos.data.repository
 
+import com.example.vinilos.data.api.ApiService
 import com.example.vinilos.data.api.RetrofitBuilder
-import com.example.vinilos.data.model.Album
+import com.example.vinilos.data.model.AlbumResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response
@@ -9,14 +10,14 @@ import retrofit2.Response
 class AlbumService {
     private val retrofit = RetrofitBuilder.getRetrofit()
 
-    suspend fun getAlbums():List<Album> {
-        return withContext(Dispatchers.IO) {
-            val response = retrofit.create(AlbumApiClient::class.java).getAllAlbums()
+    suspend fun getAlbums():List<AlbumResponse> {
+        return   withContext(Dispatchers.IO) {
+            val response = retrofit.create(ApiService::class.java).getAllAlbums()
             response.body() ?: emptyList()
         }
     }
 
-    suspend fun createAlbum(album : HashMap<String,String>): Response<Album> {
-        return retrofit.create(AlbumApiClient::class.java).createAlbum(album)
+    suspend fun createAlbum(album : HashMap<String,String>): Response<AlbumResponse> {
+        return retrofit.create(ApiService::class.java).createAlbum(album)
     }
 }
