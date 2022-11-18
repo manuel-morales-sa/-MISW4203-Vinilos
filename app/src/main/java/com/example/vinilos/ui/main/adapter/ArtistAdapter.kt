@@ -26,12 +26,12 @@ class ArtistAdapter(
         val bindPar = binding
         fun bind(artist: ArtistResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumName.text = artist.name
-                bindPar.textAlbumRecord.text =
+                bindPar.textViewElementTitle.text = artist.name
+                bindPar.textElementDetail.text =
                     if (artist.birthDate == null) bandText else musicText
-                Glide.with(bindPar.imageViewAvatar.context)
+                Glide.with(bindPar.imageElementList.context)
                     .load(artist.image)
-                    .into(bindPar.imageViewAvatar)
+                    .into(bindPar.imageElementList)
             }
         }
     }

@@ -24,14 +24,14 @@ class CollectorAdapter(
         val bindPar = binding
         fun bind(collector: CollectorResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumName.text = collector.name
-                bindPar.textAlbumRecord.text = collector.email
-                Glide.with(bindPar.imageViewAvatar.context)
+                bindPar.textViewElementTitle.text = collector.name
+                bindPar.textElementDetail.text = collector.email
+                Glide.with(bindPar.imageElementList.context)
                     .load(R.drawable.ic_baseline_construction_collector)
                     .error(R.drawable.ic_baseline_construction_collector).placeholder(R.drawable.ic_baseline_construction_collector)
                     .transition(DrawableTransitionOptions.withCrossFade())
-                    .into(bindPar.imageViewAvatar)
-                bindPar.imageViewAvatar.setColorFilter(
+                    .into(bindPar.imageElementList)
+                bindPar.imageElementList.setColorFilter(
                     Color.rgb(93, 193, 185),
                     PorterDuff.Mode.SRC_ATOP
                 )
