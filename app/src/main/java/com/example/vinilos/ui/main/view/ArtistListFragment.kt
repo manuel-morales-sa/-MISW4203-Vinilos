@@ -85,7 +85,6 @@ class ArtistListFragment : Fragment() {
     private fun retrieveList(artists: List<ArtistResponse>) {
         adapter.apply {
             addArtists(artists)
-            notifyDataSetChanged()
         }
     }
 

@@ -14,7 +14,6 @@
     <string name="item_layout_description_image">Imagen del artista,album o coleccionista</string>
     <string name="menu_album__label">Albums</string>
     <string name="menu_artist_label">Artists</string>
-    <string name="title_activity_detail_album">Prueba</string>
     <string name="logo">Logo</string>
     <string name="collector">Coleccionistas</string>
     <string name="visitor">Visitantes</string>

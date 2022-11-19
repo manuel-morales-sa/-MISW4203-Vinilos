@@ -99,7 +99,6 @@ class AlbumListFragment : Fragment() {
     private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)
-            notifyDataSetChanged()
         }
     }
 }
