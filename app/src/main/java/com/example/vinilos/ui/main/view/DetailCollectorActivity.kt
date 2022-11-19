@@ -2,18 +2,19 @@ package com.example.vinilos.ui.main.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
 import com.example.vinilos.data.api.ApiHelper
 import com.example.vinilos.data.api.RetrofitBuilder
 import com.example.vinilos.data.model.CollectorResponse
+import com.example.vinilos.network.CacheManager
 import com.example.vinilos.ui.base.CollectorViewModelFactory
 import com.example.vinilos.ui.main.adapter.DetailCollectorAdapter
 import com.example.vinilos.ui.main.adapter.IdCollector
 import com.example.vinilos.ui.main.viewmodel.CollectorViewModel
 import com.example.vinilos.utils.Status
-import com.vinylsMobile.vinylsapplication.R
 import com.vinylsMobile.vinylsapplication.databinding.ActivityDetailCollectorBinding
 
 class DetailCollectorActivity : AppCompatActivity() {
@@ -31,7 +32,7 @@ class DetailCollectorActivity : AppCompatActivity() {
         supportActionBar?.setHomeButtonEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setupViewModel()
-        setupCollectorObservers(intent.getStringExtra(IdCollector)!!)
+        getCollectorsObservers(intent.getStringExtra(IdCollector)!!)
 
 
     }
@@ -43,6 +44,22 @@ class DetailCollectorActivity : AppCompatActivity() {
         )[CollectorViewModel::class.java]
     }
 
+    private fun getCollectorsObservers(id: String) {
+        var potentialResp = CacheManager.getInstance(application.applicationContext).getCollectors(id.toInt())
+
+        if(potentialResp==null){
+            Log.d("Cache decision", "Se saca de la red")
+            setupCollectorObservers(id)
+        }
+        else{
+            Log.d("Cache decision", "return ${potentialResp.name} elements from cache")
+            retrieveCollectorDetail(
+                potentialResp,
+                false
+            )
+        }
+    }
+
     private fun setupCollectorObservers(id: String) {
         collectorViewModel.getCollectorsDetail(id).observe(this, {
             it?.let { resource ->
@@ -50,7 +67,8 @@ class DetailCollectorActivity : AppCompatActivity() {
                     Status.SUCCESS -> {
                         resource.data?.let { collectorDetail ->
                             retrieveCollectorDetail(
-                                collectorDetail
+                                collectorDetail,
+                                false
                             )
                         }
                     }
@@ -64,7 +82,8 @@ class DetailCollectorActivity : AppCompatActivity() {
         })
     }
 
-    private fun retrieveCollectorDetail(collector: CollectorResponse) {
+    private fun retrieveCollectorDetail(collector: CollectorResponse, b: Boolean) {
+        CacheManager.getInstance(application.applicationContext).addCollector(collector.id.toInt(), collector)
         supportActionBar?.title = collector.name
         supportActionBar?.subtitle = "Coleccionista"
         adapter = DetailCollectorAdapter(collector)
