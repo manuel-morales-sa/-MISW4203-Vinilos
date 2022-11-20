@@ -6,9 +6,9 @@
     <color name="gray_fount">#131519</color>
     <color name="white_text">#FFFFFF</color>
     <color name="black_text">#090E0E</color>
-    <color name="orange_night">#FF9503</color>
     <color name="black">#FAF8F8</color>
     <color name="white">#FAFAFA</color>
     <color name="turquoise">#16C8C9</color>
-    <color name="primary">#6200EE</color>
+    <color name="ToolsBar">#57585E</color>
+    <color name="ButtonColor">#131419</color>
 </resources>

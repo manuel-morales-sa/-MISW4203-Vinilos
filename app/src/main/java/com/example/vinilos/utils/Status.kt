@@ -1,4 +1,4 @@
-package com.vinylsMobile.vinylsapplication.utils
+package com.example.vinilos.utils
 
 enum class Status {
     SUCCESS,

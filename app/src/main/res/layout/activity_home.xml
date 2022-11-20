@@ -5,21 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/base"
-    tools:context="com.example.vinilos.ui.main.view.HomeActivity">
+    tools:context="com.example.vinilos.ui.main.view.HomeActivity"
+    android:id="@+id/main">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone" />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph_album" />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="73dp"
-        android:layout_height="60dp"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:itemBackground="@color/Navbar_outline"
+        app:itemIconTint="@android:color/tab_indicator_text"
+        app:itemTextColor="@android:color/tab_indicator_text"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:menu="@menu/navigation_menu_icons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

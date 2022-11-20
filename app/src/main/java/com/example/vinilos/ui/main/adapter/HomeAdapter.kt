@@ -6,26 +6,27 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.vinilos.data.model.albumResponse
+import com.example.vinilos.data.model.AlbumResponse
 import com.example.vinilos.ui.main.view.DetailAlbumActivity
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
 const val ID = "id"
-class HomeAdapter (private val albums: ArrayList<albumResponse>
+class HomeAdapter (
+    private val albums: ArrayList<AlbumResponse>
 ) : RecyclerView.Adapter<HomeAdapter.DataViewHolder>() {
 
-    lateinit var context : Context
+    lateinit var context: Context
 
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
-        val bindPar = binding;
-        fun bind(album: albumResponse) {
+        val bindPar = binding
+        fun bind(album: AlbumResponse) {
             bindPar.root.apply {
-                bindPar.textViewAlbumTitle.text = album.name
-                bindPar.textViewDisquera.text = album.recordLabel
-                Glide.with(bindPar.imageViewAlbum.context)
+                bindPar.textViewElementTitle.text = album.name
+                bindPar.textElementDetail.text = album.recordLabel
+                Glide.with(bindPar.imageElementList.context)
                     .load(album.cover)
-                    .into(bindPar.imageViewAlbum)
+                    .into(bindPar.imageElementList)
             }
         }
     }
@@ -41,6 +42,7 @@ class HomeAdapter (private val albums: ArrayList<albumResponse>
 
     override fun onBindViewHolder(holder: DataViewHolder, position: Int) {
         holder.bindPar.root.setOnClickListener {
+            //Log.d("hola"," mundo")
             val intent = Intent(context, DetailAlbumActivity::class.java).apply {
                 putExtra(ID, albums[position].id.toString())
             }
@@ -52,7 +54,7 @@ class HomeAdapter (private val albums: ArrayList<albumResponse>
         holder.bind(albums[position])
     }
 
-    fun addAlbums(albums: List<albumResponse>) {
+    fun addAlbums(albums: List<AlbumResponse>) {
         this.albums.apply {
             clear()
             addAll(albums)
