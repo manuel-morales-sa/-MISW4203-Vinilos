@@ -23,3 +23,7 @@ Puede encontrar más información sobre el proyecto en la wiki https://github.co
 Cada archivo de esta ubicación representa un escenario de pruebas 
 2. Hacer click derecho en cada archivo de pruebas
 3. Hacer click en **Run 'NombreArchivo'**
+
+## Ver release asociado a una version.
+Para visualizar el release asociado a una version debe dar click en la lista de branches y seleccionar Tags, de esta manera puede visualizar los cambios correspondientes a la iteracion, note que en la parte derecha se encuentra la relacion de la version al release, aca se puede evidenciar de mejor manera.
+![release](https://user-images.githubusercontent.com/98921573/202888580-323a1c54-f45c-449c-82dd-c2977e79208f.png)
