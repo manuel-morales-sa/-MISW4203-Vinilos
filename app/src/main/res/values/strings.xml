@@ -21,4 +21,5 @@
     <string name="collector_label">Coleccionista:</string>
     <string name="favorite_performers">Interpretes favoritos:</string>
     <string name="comments">Comentarios:</string>
+    <string name="add_album_btn">Crear un nuevo album</string>
 </resources>
