@@ -1,6 +1,7 @@
 package com.example.vinilos.data.model
 
 import com.google.gson.annotations.SerializedName
+import com.vinylsMobile.vinylsApplication.data.model.TracksResponse
 import java.util.*
 
 class AlbumResponse {
@@ -27,4 +28,7 @@ class AlbumResponse {
 
     @SerializedName("performers")
     var performers: ArrayList<ArtistResponse> = ArrayList()
+
+    @SerializedName("tracks")
+    var tracks: ArrayList<TracksResponse> = ArrayList()
 }

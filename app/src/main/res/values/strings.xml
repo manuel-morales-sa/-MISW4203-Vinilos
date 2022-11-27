@@ -22,4 +22,31 @@
     <string name="favorite_performers">Interpretes favoritos:</string>
     <string name="comments">Comentarios:</string>
     <string name="add_album_btn">Crear un nuevo album</string>
+    <string name="sub_menu_album_options">Agregar Canción</string>
+    <string name="form_name_song">Nombre Canción</string>
+    <string name="form_song_min">min</string>
+    <string name="form_song_seg">seg</string>
+    <string name="add_song">Agregar Canción</string>
+    <string name="label_create_album_instruction">Completa todos los campos</string>
+    <string name="form_add_name_album">Nombre Album</string>
+    <string name="form_add_name_url_cover">URL cover imágen</string>
+    <string name="form_add_genero_album">Genero</string>
+    <string name="form_add_record_album">Record Label</string>
+    <string name="form_add_description_album">Descripción</string>
+    <string name="form_add_date_album">Fecha creación (dd/MM/yyyy)</string>
+    <string name="add_album">Crear Album</string>
+    <string name="tracks_label">Canciones:</string>
+    <string-array name="list_generos">
+        <item>Classical</item>
+        <item>Folk</item>
+        <item>Rock</item>
+        <item>Salsa</item>
+    </string-array>
+    <string-array name="list_records">
+        <item>Sony Music</item>
+        <item>EMI</item>
+        <item>Discos Fuentes</item>
+        <item>Elektra</item>
+        <item>Fania Records</item>
+    </string-array>
 </resources>
