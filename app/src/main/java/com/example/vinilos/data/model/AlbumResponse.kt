@@ -1,7 +1,6 @@
 package com.example.vinilos.data.model
 
 import com.google.gson.annotations.SerializedName
-import com.vinylsMobile.vinylsApplication.data.model.TracksResponse
 import java.util.*
 
 class AlbumResponse {

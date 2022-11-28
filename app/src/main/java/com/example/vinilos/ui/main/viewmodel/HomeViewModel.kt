@@ -6,7 +6,7 @@ import com.example.vinilos.data.model.AlbumModel
 import com.example.vinilos.data.repository.AlbumRepository
 import com.example.vinilos.utils.Resource
 import com.google.gson.JsonObject
-import com.vinylsMobile.vinylsApplication.data.model.TracksModel
+import com.example.vinilos.data.model.TracksModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

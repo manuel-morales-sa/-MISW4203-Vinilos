@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/base"
     tools:context="com.example.vinilos.ui.main.view.CreateAlbumActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -42,14 +43,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="100dp"
-                android:textColor="@color/black_text"
+                android:text="@string/label_create_album_instruction"
+                android:textColor="@color/turquoise"
                 android:textSize="18sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:text="@string/label_create_album_instruction" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputLayout_name"
@@ -184,11 +185,17 @@
             <Button
                 android:id="@+id/btn_create_track_Album"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/add_album"
+                android:textColor="@color/turquoise"
+                android:textColorLink="@color/turquoise"
+                android:background="@drawable/login_button"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textInputLayout_date" />

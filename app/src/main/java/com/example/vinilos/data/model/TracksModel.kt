@@ -1,4 +1,4 @@
-package com.vinylsMobile.vinylsApplication.data.model
+package com.example.vinilos.data.model
 
 import com.google.gson.JsonObject
 import java.time.Duration
