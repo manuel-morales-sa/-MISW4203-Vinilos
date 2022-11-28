@@ -55,7 +55,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/artist_name_label"
-                android:textColor="@color/black"
+                android:textColor="@color/turquoise"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewArtist" />
@@ -79,7 +79,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/artist_date_label"
-                android:textColor="@color/black"
+                android:textColor="@color/turquoise"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textLabelArtist" />
@@ -103,7 +103,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/description_label"
-                android:textColor="@color/black"
+                android:textColor="@color/turquoise"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textContentDate" />
@@ -129,7 +129,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
                 android:text="@string/artist_albums_label"
-                android:textColor="@color/black"
+                android:textColor="@color/turquoise"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textContentDescription" />
@@ -153,7 +153,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/artist_prizes_label"
-                android:textColor="@color/black"
+                android:textColor="@color/turquoise"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/listTexAlbums" />

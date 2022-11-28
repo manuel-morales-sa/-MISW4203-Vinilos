@@ -14,13 +14,12 @@ class DetailAdapter(private val albumDetail: AlbumResponse) {
         Glide.with(binding.imageViewAlbumDetails.context)
             .load(albumDetail.cover)
             .into(binding.imageViewAlbumDetails)
+        binding.textContentAlbum.text = albumDetail.name
         binding.textContentDate.text = formatDate(albumDetail.releaseDate)
         binding.textContentGenre.text = albumDetail.genre
         binding.textContentRecord.text = albumDetail.recordLabel
         binding.textContentDescription.text = albumDetail.description
         binding.listTexTracks.text = adaptStringTracks(binding)
-        binding.textContentArtist.text = adaptStringPerformers(binding)
-
     }
 
     private fun adaptStringTracks(binding: ActivityDetailAlbumBinding): String {
