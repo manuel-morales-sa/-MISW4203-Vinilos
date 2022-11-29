@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/ButtonColor"
             app:popupTheme="@style/Theme.VinylsApplication.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -41,11 +41,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
                 android:text="@string/collector_label"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/textContentCollector"
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:textColor="@color/ToolsBar"
+                android:textColor="@color/white"
                 app:layout_constraintBaseline_toBaselineOf="@+id/comments"
                 app:layout_constraintStart_toEndOf="@+id/comments"
                 tools:text="Comentarios " />

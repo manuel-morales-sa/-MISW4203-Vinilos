@@ -68,7 +68,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:hint="@string/form_add_name_album" />
+                    android:hint="@string/form_add_name_album"
+                    android:tag="@string/form_add_name_album"
+                    android:tooltipText="Nombre del album" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,7 +90,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:hint="@string/form_add_name_url_cover" />
+                    android:hint="@string/form_add_name_url_cover"
+                    android:tag="@string/form_add_name_url_cover"
+                    android:tooltipText="URL de la imagen" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,7 +116,9 @@
                     android:id="@+id/autoComplete_generos"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="none" />
+                    android:inputType="none"
+                    android:tag="Genero Musical"
+                    android:tooltipText="Genero Musical" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -137,7 +143,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="none"
-                    />
+                    android:tag="Casa Disquera"
+                    android:tooltipText="Casa Disquera" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +164,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:hint="@string/form_add_description_album" />
+                    android:hint="@string/form_add_description_album"
+                    android:tag="@string/form_add_description_album"
+                    android:tooltipText="Casa Disquera" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,7 +186,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
-                    android:hint="@string/form_add_date_album" />
+                    android:hint="@string/form_add_date_album"
+                    android:tag="@string/form_add_date_album"
+                    android:tooltipText="Fecha de lanzamiento" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
