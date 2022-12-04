@@ -20,7 +20,7 @@
         android:id="@+id/bottom_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:itemBackground="@color/Navbar_outline"
+        app:itemBackground="@color/gray_fount"
         app:itemIconTint="@android:color/tab_indicator_text"
         app:itemTextColor="@android:color/tab_indicator_text"
         app:layout_constraintBottom_toBottomOf="parent"

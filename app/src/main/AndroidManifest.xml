@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.vinylsMobile.vinylsapplication">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/nav_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Vinilos">
+        <activity
+            android:name="com.example.vinilos.ui.main.view.AlbumTrackActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name="com.example.vinilos.ui.main.view.DetailCollectorActivity"
             android:exported="false"
@@ -33,6 +39,11 @@
             android:exported="false"
             android:parentActivityName="com.example.vinilos.ui.main.view.HomeActivity"
             android:theme="@style/Theme.Vinilos.NoActionBar" />
+        <activity
+            android:name="com.example.vinilos.ui.main.view.CreateAlbumActivity"
+            android:parentActivityName="com.example.vinilos.ui.main.view.HomeActivity"
+            android:theme="@style/Theme.Vinilos.NoActionBar"
+            android:exported="false" />
         <activity
             android:name="com.example.vinilos.ui.main.view.MainActivity"
             android:exported="true">
