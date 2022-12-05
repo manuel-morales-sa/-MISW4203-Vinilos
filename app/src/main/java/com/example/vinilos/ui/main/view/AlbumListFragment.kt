@@ -1,5 +1,6 @@
 package com.example.vinilos.ui.main.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +18,7 @@ import com.example.vinilos.ui.main.adapter.HomeAdapter
 import com.example.vinilos.ui.main.viewmodel.HomeViewModel
 import com.vinylsMobile.vinylsapplication.databinding.FragmentAlbumListBinding
 import com.example.vinilos.utils.Status
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
  * A simple [Fragment] subclass.
@@ -77,9 +79,23 @@ class AlbumListFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentAlbumListBinding.inflate(layoutInflater, container, false)
         setupUI()
+        bindMenuEvents()
         setupViewModel()
         setupObservers()
         return binding.root
+    }
+
+    private fun bindMenuEvents(){
+        val createAlbumMenuButton: FloatingActionButton = binding.btnFabCreateAlbum
+        createAlbumMenuButton.setOnClickListener { view ->
+            launchAlbumCreateActivity(view)
+        }
+
+    }
+
+    private fun launchAlbumCreateActivity(view: View) {
+        val intent = Intent(activity, CreateAlbumActivity::class.java)
+        startActivity(intent)
     }
 
     companion object {
@@ -99,6 +115,7 @@ class AlbumListFragment : Fragment() {
     private fun retrieveList(albums: List<AlbumResponse>) {
         adapter.apply {
             addAlbums(albums)
+            notifyDataSetChanged()
         }
     }
 }

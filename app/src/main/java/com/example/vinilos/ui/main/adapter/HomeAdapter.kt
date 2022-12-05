@@ -11,12 +11,13 @@ import com.example.vinilos.ui.main.view.DetailAlbumActivity
 import com.vinylsMobile.vinylsapplication.databinding.ItemLayoutBinding
 
 const val ID = "id"
+const val NAME = "name"
+
 class HomeAdapter (
     private val albums: ArrayList<AlbumResponse>
 ) : RecyclerView.Adapter<HomeAdapter.DataViewHolder>() {
 
     lateinit var context: Context
-
 
     class DataViewHolder(binding: ItemLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         val bindPar = binding
@@ -45,6 +46,7 @@ class HomeAdapter (
             //Log.d("hola"," mundo")
             val intent = Intent(context, DetailAlbumActivity::class.java).apply {
                 putExtra(ID, albums[position].id.toString())
+                putExtra(NAME, albums[position].name)
             }
 
             context.startActivity(intent)

@@ -27,4 +27,7 @@ class AlbumResponse {
 
     @SerializedName("performers")
     var performers: ArrayList<ArtistResponse> = ArrayList()
+
+    @SerializedName("tracks")
+    var tracks: ArrayList<TracksResponse> = ArrayList()
 }
